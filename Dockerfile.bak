@@ -1,0 +1,13 @@
+FROM larrycai/ubuntu-sshd:latest
+
+COPY sources.list /etc/apt/
+
+RUN apt-get update
+
+RUN apt-get install -y vim
+
+RUN apt-get install -y openjdk-7-jre
+
+RUN mkdir /rmi-server
+
+EXPOSE 1199
